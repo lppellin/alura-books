@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styled from "styled-components"
 import { Titulo } from "./titulo";
 
@@ -62,3 +63,69 @@ function CardRecomenda({ titulo, subtitulo, descricao, img }) {
     )
 }
 export default CardRecomenda
+=======
+import styled from "styled-components"
+import { Titulo } from "./titulo";
+
+const Card = styled.div`
+    align-items: center;
+    background-color: #FFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    max-width: 600px;
+    padding: 25px 20px;
+    justify-content: space-around;
+    width: 100%;  
+`
+
+const Botao = styled.button`
+    background-color: #EB9B00;
+    color: #FFF;
+    padding: 10px 0px;
+    font-size: 16px;
+    border: none;
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    width: 150px;
+    &:hover {
+        cursor: pointer;
+    }
+`
+
+const Descricao = styled.p`
+    max-width: 300px;
+`
+
+const Subtitulo = styled.h4`
+    color: #002F52;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+`
+
+const ImgLivro = styled.img`
+    width: 150px;
+`
+
+function CardRecomenda({ titulo, subtitulo, descricao, img }) {
+    return (
+        < Card >
+            <div>
+                <Titulo fontSize="16px" color="orange" $alignment="left"> {titulo}</Titulo>
+                <Subtitulo>{subtitulo}</Subtitulo>
+                <Descricao>{descricao}</Descricao>
+            </div>
+            <div>
+                <ImgLivro src={img} />
+                <Botao>Saiba mais</Botao>
+            </div>
+        </Card >
+    )
+}
+export default CardRecomenda
+>>>>>>> 9db4eebfa7495377fd28c7c40613a549e2f9d5e3
